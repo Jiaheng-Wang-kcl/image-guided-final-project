@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: needle_navigation
+    relative_path: urdf/standard_test_Robot.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/daVinci.srdf
+  CONFIG:
+    author_name: Jiaheng Wang
+    author_email: Wang_jiaheng@outlook.com
+    generated_timestamp: 1720918524

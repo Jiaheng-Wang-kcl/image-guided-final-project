@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This SRDF file defines additional semantic information about the robot structure -->
+<robot name="cr5_robot">
+    <!-- Define the group for the arm joints -->
+    <group name="cr5_arm">
+        <joint name="joint1" />
+        <joint name="joint2" />
+        <joint name="joint3" />
+        <joint name="joint4" />
+        <joint name="joint5" />
+        <joint name="joint6" />
+    </group>
+
+    <!-- Define the home state for the arm group -->
+    <group_state name="home" group="cr5_arm">
+        <joint name="joint1" value="0" />
+        <joint name="joint2" value="0" />
+        <joint name="joint3" value="0" />
+        <joint name="joint4" value="0" />
+        <joint name="joint5" value="0" />
+        <joint name="joint6" value="0" />
+    </group_state>
+
+    <!-- Define a virtual joint linking to a dummy link -->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="dummy_link" />
+
+    <disable_collisions link1="Link1" link2="Link2" reason="Adjacent" />
+    <disable_collisions link1="Link1" link2="Link4" reason="Never" />
+    <disable_collisions link1="Link1" link2="base_link" reason="Adjacent" />
+    <disable_collisions link1="Link2" link2="Link3" reason="Adjacent" />
+    <disable_collisions link1="Link2" link2="base_link" reason="Never" />
+    <disable_collisions link1="Link3" link2="Link4" reason="Adjacent" />
+    <disable_collisions link1="Link4" link2="Link5" reason="Adjacent" />
+    <disable_collisions link1="Link4" link2="Link6" reason="Never" />
+    <disable_collisions link1="Link4" link2="base_link" reason="Never" />
+    <disable_collisions link1="Link5" link2="Link6" reason="Adjacent" />
+    <disable_collisions link1="Link6" link2="PointerLink" reason="Adjacent" />
+</robot>
+

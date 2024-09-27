@@ -1,0 +1,6 @@
+<launch>
+   <rosparam command="load" file="$(find needle_navigation)/config/user_parameters.yaml" />
+   <node pkg="ros_igtl_bridge" type="ros_igtl_bridge_node" name="ros_igtl_bridge_node" output="screen"/>
+   <node name="move_pose" pkg="needle_navigation" type="move_pose" output="screen"/>
+   <node name="pose" pkg="needle_navigation" type="pose" output="screen"/>
+</launch>

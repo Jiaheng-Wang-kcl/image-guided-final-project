@@ -1,0 +1,20 @@
+controller_list:
+  - name: robot_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - setup1_joint
+      - setup2_joint
+      - setup3_joint
+      - outer_yaw_joint
+      - outer_pitch_back_joint
+      - outer_pitch_middle_joint
+      - outer_pitch_front_joint
+      - insertion_joint
+  - name: end_effector_group_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - insertion_joint
